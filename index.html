@@ -91,19 +91,19 @@
   <div class="terminal">
     <h1>Project ERENTRAM</h1>
     <div class="subtext">AUTHORIZATION PROTOCOL</div>
-    <input type="password" id="passwordInput" placeholder="ENTER PASSWORD">
+    <input type="text" id="usernameInput" placeholder="USER ID">
     <br>
-    <button onclick="checkPassword()">VERIFY</button>
+    <button onclick="checkUsername()">VERIFY</button>
     <div id="message"></div>
   </div>
 
   <script>
-    function checkPassword() {
-      const correctPassword = "BurstLink";
-      const input = document.getElementById("passwordInput").value;
+    function checkUsername() {
+      const correctUsername = "Heathcliff";
+      const input = document.getElementById("usernameInput").value;
       const message = document.getElementById("message");
 
-      if (input === correctPassword) {
+      if (input === correctUsername) {
         message.innerHTML = `
           ACCESS GRANTED<span class="blink">_</span><br><br>
           <a href="https://docs.google.com/presentation/d/14cXx931MhCI_IDTmCRAhXjrBky7b51-S3164Jw8qoGY/edit?slide=id.p#slide=id.p"
