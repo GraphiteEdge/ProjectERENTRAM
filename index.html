@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MALCONTENT ACCELERATION PROJECT</title>
+  <style>
+    body {
+      background-color: black;
+      color: #00ff7f;
+      font-family: "Courier New", monospace;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .terminal {
+      border: 2px solid #00ff7f;
+      padding: 40px;
+      width: 460px;
+      text-align: center;
+      box-shadow: 0 0 25px #00ff00;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+      letter-spacing: 3px;
+      font-size: 20px;
+    }
+
+    .subtext {
+      font-size: 13px;
+      margin-bottom: 30px;
+      letter-spacing: 2px;
+    }
+
+    input {
+      background: black;
+      border: 1px solid #00ff7f;
+      color: #00ff7f;
+      padding: 10px;
+      width: 85%;
+      font-family: "Courier New", monospace;
+      font-size: 16px;
+      outline: none;
+      text-align: center;
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 8px 25px;
+      background: black;
+      border: 1px solid #00ff7f;
+      color: #00ff7f;
+      cursor: pointer;
+      font-family: "Courier New", monospace;
+      letter-spacing: 2px;
+    }
+
+    button:hover {
+      background: #002200;
+    }
+
+    #message {
+      margin-top: 25px;
+      min-height: 40px;
+      font-size: 14px;
+      letter-spacing: 2px;
+    }
+
+    .blink {
+      animation: blink 1s step-end infinite;
+    }
+
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+
+    a {
+      color: #00ff7f;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-shadow: 0 0 8px green;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="terminal">
+    <h1>MALCONTENT ACCELERATION PROJECT </h1>
+    <div class="subtext">AUTHORIZATION PROTOCOL</div>
+    <input type="password" id="passwordInput" placeholder="ENTER PASSWORD">
+    <br>
+    <button onclick="checkPassword()">VERIFY</button>
+    <div id="message"></div>
+  </div>
+
+  <script>
+    function checkPassword() {
+      const correctPassword = "LinkStart";
+      const input = document.getElementById("passwordInput").value;
+      const message = document.getElementById("message");
+
+      if (input === correctPassword) {
+        message.innerHTML = `
+          ACCESS GRANTED<span class="blink">_</span><br><br>
+          <a href="https://docs.google.com/presentation/d/1N1k6uvh5G2bODqQy2bue6ldjKEBjqF-hgqLOb5g8Q6o/edit?slide=id.p#slide=id.p"
+          target="_blank">
+          >> OPEN FILE
+          </a>
+        `;
+      } else {
+        message.innerHTML = "ACCESS DENIED";
+      }
+    }
+  </script>
+
+</body>
+</html>
